@@ -1,0 +1,88 @@
+h1 {
+    color: rgb(35, 133, 103);
+}
+body {
+    background-color: rgb(230, 178, 178);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    text-align: left;
+    /* width: 100%;  */
+    /* border-collapse: collapse; */
+}
+
+table td {
+    overflow-wrap: break-word;
+
+}
+table thead tr th {
+    font-size: larger;
+}
+td {
+    font-size: smaller;
+}
+form {
+    /* text-align: center; */
+    padding-left: 10px;
+}
+
+form.del-form {
+    padding-left: 0px;
+}
+
+form input {
+    width: 50%;
+    border: 0;
+    outline: 0;
+    background: none;
+    border: 2px solid gray;
+    padding: 10px 5px 10px 5px;
+    border-radius: 25px;
+    transition: 1s;
+}
+
+form button {
+    width: 25%;
+    border: 0;
+    outline: 0;
+    background: none;
+    border: 1px solid rgb(20, 172, 6);
+    margin-left: 20px;
+    padding: 10px 5px 10px 5px;
+    border-radius: 25px;
+    transition: 0.5s;
+}
+
+form input:focus {
+    width: 60%;
+}
+
+form button:hover {
+    background-color: rgb(20, 172, 6);
+    color:white;
+}
+
+.task {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    background-color: rgb(222, 236, 235);
+    padding: 15px 0px 15px 0px;
+}
+
+.underlined {
+    text-decoration: underline;
+}
+
+.table-btn {
+    width: 100%;
+    margin-left: 0;
+}
+
+.border-below {
+    border-bottom:1px solid black;
+}

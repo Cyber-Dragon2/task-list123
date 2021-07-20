@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="/static/home.css?{% now \"U\" %}">
+</head>
+
+<body>
+    <div class="task">
+        <form action="/" method="POST">
+            {% csrf_token %}
+            <input type="text" name="TodoTitle" placeholder="Type your Task">
+            <button type="submit">Add Task</button>
+        </form>
+    </div>
+    <h1 style="text-align: center;" class="underlined">All Task</h1>
+    <div class = "task">
+        <table>
+            <thead>
+                <tr class = "underlined">
+                    <th style="width: 10%;"></th>
+                    <th style="width: 25%;">Date</th>
+                    <th style="width:45%;">Task</th>
+                    <th style="width: 25%;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in list_items %}
+                <tr>
+                    <td class="border-below"><input type="checkbox" name="status" value="done" style="width: 20px; height: 20px;"></td>
+                    <td class="border-below">{{item.TodoDate}}</td>
+                    <td class="border-below">{{item.TodoTitle}}</td>
+                    <td><form action="/" method="POST" class='del-form'>{% csrf_token %}<button type="submit" class="table-btn" name='del' value={{item.id}}>Delete</button></form></td>
+                </tr> 
+            </tbody>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>
